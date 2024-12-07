@@ -1,32 +1,10 @@
-packer {
-  required_plugins {
-    amazon = {
-      version = ">= 1.3.3"
-      source  = "github.com/hashicorp/amazon"
-    }
-    vagrant = {
-      version = ">= 1.1.1"
-      source  = "github.com/hashicorp/vagrant"
-    }
-  }
-}
-
-# using amazon-ebs (elastic block storage) as template image
-source "amazon-ebs" "ubuntu" {
-  ami_name      = "test-packer-linux-aws"
-  source_ami = "0557a15b87f89cf"
-  instance_type = "t2.micro"
- region        = "us-west-2"
-  ssh_username = "ubuntu"
-}
-
 # image builder
 build {
-  name = "test-packer-builder"
+  name = var.build_name
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
-
+  # config the image with bash script
   provisioner "shell" {
     inline = [
       "sudo apt update",
@@ -40,7 +18,6 @@ build {
   provisioner "shell" {
     inline = ["echo your configured image is created and ready to be deployed"]
   }
-
   # turn into a vagrant box e.g. for dev environment
   post-processor "vagrant" {}
 }
