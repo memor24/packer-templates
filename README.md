@@ -18,3 +18,4 @@ For using cloud images as initial template, use cloud credentials, e.g. for AWS 
 $ export AWS_ACCESS_KEY_ID="<YOUR_AWS_ACCESS_KEY_ID>"
 $ export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
 ```
+Good ref: https://www.youtube.com/watch?v=r0I4TTO957w&t=415s
