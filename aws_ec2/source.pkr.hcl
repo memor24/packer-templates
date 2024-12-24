@@ -1,4 +1,4 @@
-# source a packer custom image from an aws ubuntu as base image
+# source a packer custom image from an aws ami as base image
 
 packer {
   required_plugins {
