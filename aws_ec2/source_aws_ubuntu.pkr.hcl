@@ -1,3 +1,5 @@
+# source a packer custom image from an aws ubuntu as base image
+
 packer {
   required_plugins {
     amazon = {
