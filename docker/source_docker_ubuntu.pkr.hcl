@@ -1,3 +1,5 @@
+# source a custom packer image from a docker ubuntu image as base image
+
 packer {
     required_plugins {
         docker = {
