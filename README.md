@@ -24,4 +24,4 @@ For using cloud images as base image, use cloud credentials, e.g. for AWS CLI as
 $ export AWS_ACCESS_KEY_ID="<YOUR_AWS_ACCESS_KEY_ID>"
 $ export AWS_SECRET_ACCESS_KEY="<YOUR_AWS_SECRET_ACCESS_KEY>"
 ```
-Case for why to use Packer [video here](https://www.youtube.com/watch?v=r0I4TTO957w&t=415s)
+The case for utilizing Packer [video here](https://www.youtube.com/watch?v=r0I4TTO957w&t=415s)
